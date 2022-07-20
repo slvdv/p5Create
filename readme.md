@@ -1,11 +1,11 @@
 # Usage
-`python3 p5Create [target_directory]`
+`python3 p5create [target_directory]`
 
 ## Example
-`python3 p5Create .` -> creates a p5 project in the working directory
+`python3 p5create .` -> creates a p5 project in the working directory
 
 ## Add alias (linux)
-- Move p5Create script somewhere permanent. Personally, I keep my utility scripts inside a folder called ~/scripts
-`mv p5Create.py ~/scripts`
+- Move p5Create script somewhere permanent. Personally, I keep my utility scripts inside a folder called ~/data/utilities
+`mv p5Create.py ~/data/utilities`
 
-`sudo nano ~/.bashrc` and add a line `alias p5Create='python3 ~/scripts/p5Create.py .`
+`sudo nano ~/.bashrc` and add a line `alias p5c='python3 ~/data/utilities/p5create.py`
