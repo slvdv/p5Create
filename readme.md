@@ -10,4 +10,4 @@
 
 `sudo nano ~/.bashrc`
 
-and add a line `alias p5Create='python3 ~/scripts/p5Create.py .'
+and add a line `alias p5Create='python3 ~/scripts/p5Create.py .`
