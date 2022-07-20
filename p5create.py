@@ -24,13 +24,13 @@ indexTpl = """<!DOCTYPE html>
   </body>
 </html>"""
 
-sketchTpl = """void setup()
+sketchTpl = """function setup()
 {
 	createCanvas(window.innerWidth, window.innerHeight);
 	background(35);
 }
 
-void draw()
+function draw()
 {
 
 }"""
