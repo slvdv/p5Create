@@ -1,13 +1,9 @@
-import os
 import sys
 import argparse
 import pathlib
 import shutil
 
-from sqlalchemy import null
-
-
-#### TEMPLATES
+#### TEMPLATES ####
 indexTpl = """<!DOCTYPE html>
 <html lang="en">
   <head>
@@ -28,6 +24,14 @@ sketchTpl = """function setup()
 {
 	createCanvas(window.innerWidth, window.innerHeight);
 	background(35);
+}"""
+
+styleTpl = """html, body {
+  margin: 0;
+  padding: 0;
+}
+canvas {
+  display: block;
 }
 
 function draw()
@@ -35,13 +39,7 @@ function draw()
 
 }"""
 
-####
-
-
-
-
-
-
+#### END TEMPLATES ####
 
 def main():
     parser = argparse.ArgumentParser(description='Creates a new p5 project in specified directory.')
@@ -56,11 +54,13 @@ def main():
 
     
     indexFile = open(f"{target}/index.html", "x")
-
     indexFile.write(indexTpl)
 
     sketchFile = open(f"{target}/sketch.js", "x")
     sketchFile.write(sketchTpl)
+    
+    styleFile = open(f"{target}/style.css", "x")
+    styleFile.write(styleTpl)
 
 
 main()
